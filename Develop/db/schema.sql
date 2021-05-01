@@ -2,8 +2,12 @@ DROP DATABASE IF EXISTS ecommerce_db;
 
 CREATE DATABASE ecommerce_db;
 
+-- DO I NEED THIS USE COMMAND?
 USE ecommerce_db;
 
+
+-- TODO:  Fix syntax, mysql doesnt like these () or something
+-- or is this the models section and not to be in this file at all?
 
 CREATE TABLE category (
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
