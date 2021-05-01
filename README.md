@@ -19,14 +19,16 @@ Internet retail is the largest sector of the electronics industry and serves bus
 ## Installation
 To install necessary dependencies, run the following command:
 ~~~
-XXXX
-XXXX
-XXXX
+`npm init -y`
+`npm install`
+`npm install inquirer`
+`npm install mysql`
+`node index.js` 
 ~~~
 
 ## Usage
 
-XXXXXX
+Clone or download the project from Github to your local computer.  From the project directory, `run npm init -y`,` npm install` and then `node ./index.js` to XXXXXXXXXXXXXXX. 
 
 ## License 
 This project is licensed under the [License: Unlicense](http://unlicense.org/) license.
