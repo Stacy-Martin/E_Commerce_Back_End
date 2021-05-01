@@ -1,3 +1,5 @@
+// DONE
+
 const { Category } = require('../models');
 
 const categoryData = [

@@ -1,4 +1,4 @@
-// import models
+// import models - THIS IS WHERE YOU BUILD YOUR ASSOCIATIONS
 const Product = require('./Product');
 const Category = require('./Category');
 const Tag = require('./Tag');
