@@ -1,19 +1,11 @@
-// TODO:  understand define columns, what needs to be different between the 
-// columns on these 3 js files (product, producttag, tag)
-// reference schema here 
-// finish product columns
-
 // import important parts of sequelize library
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes, DECIMAL } = require('sequelize');
 // import our database connection from config.js
 const sequelize = require('../config/connection');
 
 // Initialize Product model (table) by extending off Sequelize's Model class
 class Product extends Model {}
 
-// TODO:  set up fields and rules for Product model
-// Check schema definitions for rules:
-// need id, product name, price, stock, and category id
 Product.init(
   {
     // define columns
@@ -26,8 +18,26 @@ Product.init(
     product_name: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    price: {
+      type: DataTypes.DECIMAL,
+      isDecimal: true,
+      allowNull: false,
+    },
+    stock: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 10,
+      isNumeric: true, 
+    },
+    category_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'category',
+        key: 'id'
     }
   },
+},
   {
     sequelize,
     timestamps: false,

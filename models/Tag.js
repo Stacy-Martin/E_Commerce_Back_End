@@ -1,4 +1,4 @@
-// Done...maybe
+// Done
 
 const { Model, DataTypes } = require('sequelize');
 
@@ -16,8 +16,7 @@ Tag.init(
       autoIncrement: true
     },
     tag_name: {
-      type: DataTypes.STRING,
-      allowNull: false
+      type: DataTypes.STRING
     }
   },
   {

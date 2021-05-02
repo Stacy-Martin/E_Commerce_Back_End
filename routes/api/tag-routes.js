@@ -58,7 +58,13 @@ router.post('/', async (req, res) => {
 
 // TODO: complete this route 
 // update a tag's name by its `id` value
-router.put('/:id', (req, res) => {
+router.put('/:id', async (req, res) => {
+  const id = req.params.id;
+  await Category.update(req.body, {
+    where: {
+      id: req.params.id
+    }
+  });
 });
 
 

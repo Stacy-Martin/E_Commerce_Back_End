@@ -1,22 +1,21 @@
-// Done...maybe need to check what this ProductTag extends Model if it 
-// needs to do something else or something further with the columns??
+// DONE 
 
 const { Model, DataTypes } = require('sequelize');
 
-const sequelize = require('../config/connection');
+const sequelize = require('../config/connection.js');
 
-class ProductTag extends Model {}
+class Category extends Model {}
 
-ProductTag.init(
+Category.init(
   {
-    // define columns
+    // define columns, these are the constraints for each model
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
-    product_id: {
+    category_name: {
       type: DataTypes.STRING,
       allowNull: false
     }
@@ -26,8 +25,8 @@ ProductTag.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'product_tag',
+    modelName: 'category',
   }
 );
 
-module.exports = ProductTag;
+module.exports = Category;
