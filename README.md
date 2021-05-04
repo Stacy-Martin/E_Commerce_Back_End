@@ -17,18 +17,18 @@ Internet retail is the largest sector of the electronics industry and serves bus
   - [Preview](#preview)
 
 ## Installation
-To install necessary dependencies, run the following command:
+To install necessary dependencies and initialize the database, run the following command:
 ~~~
 `npm init -y`
 `npm install`
 `npm install inquirer`
 `npm install mysql`
-`node index.js` 
+`node ./index.js` 
 ~~~
 
 ## Usage
 
-Clone or download the project from Github to your local computer.  From the project directory, `run npm init -y`,` npm install` and then `node ./index.js` to XXXXXXXXXXXXXXX. 
+Clone or download the project from Github to your local computer.  From the project directory execute the following commands: ` npm install`, `run npm init -y`, and then `node ./index.js`.  Then create the database by running the schema in MySQL workbench.  Back in the terminal, populate the database with `npm run seed` and get the server running with `npm start`.  
 
 ## License 
 This project is licensed under the [License: Unlicense](http://unlicense.org/) license.
