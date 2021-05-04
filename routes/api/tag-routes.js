@@ -1,16 +1,7 @@
-// TODO:  update tag function, router.put
-// TODO:  better understand wtf is going on with these routes in general
-// TODO:  study the different response numbers
-
-
 const router = require('express').Router();
 const { Tag, Product, ProductTag, Category } = require('../../models');
 
 // The `/api/tags` endpoint
-
-// ?? on these routes are we using category. (findALl or findByPK etc) or tag. ??
-// ??  What is this create(req.body) ??
-
 
 // find all tags and include associated Product data
 router.get('/', async (req, res) => {
@@ -56,7 +47,6 @@ router.post('/', async (req, res) => {
   }
 });
 
-// TODO: complete this route 
 // update a tag's name by its `id` value
 router.put('/:id', async (req, res) => {
   const id = req.params.id;

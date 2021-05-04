@@ -9,7 +9,7 @@ const { Category, Product } = require('../../models');
   // CATEGORY.FINDALL IS A PROMISE ARRAY MODEL,
   // WHERE CATEGORY IS A MODEL AND FINDALL QUERIES FOR (OBJECTS/STRINGS/ARRAYS/ETC)
   // router.get handles GET requests to the /user/:id path.
-  // TODO: find all categories - be sure to include its associated Products
+  // find all categories - be sure to include its associated Products
   router.get('/', async (req, res) => {
     try {
       const categoryData = await Category.findAll({
@@ -22,7 +22,7 @@ const { Category, Product } = require('../../models');
   });
 
 
-// TODO: find one category by its `id` value - be sure to include its associated Products
+// find one category by its `id` value - be sure to include its associated Products
 router.get('/:id', async (req, res) => {
   try {
     const categoryData = await Category.findByPk(req.params.id, {
@@ -39,7 +39,7 @@ router.get('/:id', async (req, res) => {
 });
 
 
-// TODO - create a new category
+// create a new category
 router.post('/', async (req, res) => {
   try {
     const categoryData = await Category.create(req.body);
@@ -50,7 +50,7 @@ router.post('/', async (req, res) => {
 });
 
 
-// TODO - update a category by its `id` value ???
+// update a category by its `id` value
 router.put('/:id', async (req, res) => {
   const id = req.params.id;
   await Category.update(req.body, {
@@ -61,7 +61,7 @@ router.put('/:id', async (req, res) => {
 });
 
 
-// TODO - delete a category by its `id` value
+// delete a category by its `id` value
 router.delete('/:id', async (req, res) => {
   try {
     const categoryData = await Category.destroy({

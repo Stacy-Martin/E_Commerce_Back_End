@@ -43,9 +43,7 @@ To contribute to this repository, fork it and submit a pull request for review.
 
 ## Preview
 
-The following screenshot shows a section of the Employee Tracker database that was generated:
-
-![](XXXXXXXXX)
-
+For a video demo of this project, watch here:
+https://drive.google.com/file/d/1pqAVhpUMEu2PMRAq-Kte3IJ-tiCTTHQ6/view
 
 Thanks to my study buddies ;) teacher, and TA for technical assistance - and many others for encouragement! 
